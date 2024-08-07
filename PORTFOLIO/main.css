@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header .logo {
+    float: left;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+#hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 24px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Existing styles omitted for brevity */
+
+#projects {
+    padding: 60px 0;
+    background-color: #FFFFFF;
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+}
+
+.project {
+    background: #bbb5b5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: calc(33.333% - 40px); /* Adjust width for 3 items per row */
+    box-sizing: border-box;
+    height: 300px; /* Set a fixed height for consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.project p {
+    flex-grow: 1;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.project a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .project {
+        width: calc(50% - 20px); /* Adjust width for 2 items per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        width: calc(100% - 20px); /* Adjust width for 1 item per row on small screens */
+    }
+}
+
+#explore {
+    padding: 60px 0;
+    background-color: #FFFFFF;
+}
+
+#explore h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.explore-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+}
+
+.explore-item {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: calc(33.333% - 40px); /* Adjust width as needed */
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.explore-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.explore-item p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0 0;
+}
+
+.explore-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.explore-item img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+    .explore-item {
+        width: calc(50% - 20px); /* Adjust width for 2 items per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .explore-item {
+        width: calc(100% - 20px); /* Adjust width for 1 item per row on small screens */
+    }
+}
+
+#skills {
+    padding: 60px 0;
+    background-color: #FFFFFF;
+}
+
+#skills h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+}
+
+#skills li {
+    background: #77aaff;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px); /* Adjust width as needed */
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    #skills li {
+        width: calc(50% - 20px); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #skills li {
+        width: calc(100% - 20px); /* Adjust for very small screens */
+    }
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+.contact-links {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.contact-links li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.contact-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.contact-links img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.contact-links img:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 200px; 
+    height: auto; 
+    display: block;
+    margin: 20px auto; 
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #504b4b; 
+    padding: 10px;
+    margin: 20px auto; 
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #fff; 
+}
+
+.education-item img {
+    width: 100px; 
+    height: auto; 
+    margin-right: 20px; 
+}
+
+.education-item p {
+    text-align: left;
+    margin: 0;
+}
+
+.education-item p strong {
+    display: block;
+    margin-bottom: 5px;
+}
+@keyframes float {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}

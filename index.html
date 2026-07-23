@@ -2079,12 +2079,35 @@
       const isSubjectOk = validateField('fg-subject', v => v.length >= 3);
       const isMsgOk     = validateField('fg-message', v => v.length >= 20);
 
-      if (isNameOk && isEmailOk && isSubjectOk && isMsgOk) {
+    if (isNameOk && isEmailOk && isSubjectOk && isMsgOk) {
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        const phoneNumber = "918688470533";
+
+        const whatsappMessage = `*New Contact Form Submission*
+
+        *Name:* ${name}
+        *Email:* ${email}
+        *Subject:* ${subject}
+        *Message:* ${message}`;
+
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+        window.open(whatsappUrl, '_blank');
+
         const success = document.getElementById('formSuccess');
         success.style.display = 'block';
+
         form.reset();
-        setTimeout(() => { success.style.display = 'none'; }, 5000);
-      }
+
+        setTimeout(() => {
+            success.style.display = 'none';
+        }, 5000);
+    }
     });
 
     form.querySelectorAll('input, textarea').forEach(input => {
@@ -2125,6 +2148,13 @@
     // ---- EDIT THIS array whenever you share a new LinkedIn post ----
     // thumb is optional (image path/URL) — falls back to an icon if omitted.
     const LINKEDIN_POSTS = [
+            {
+        title: "Every opportunity to give back to your alma mater is a privilege.",
+        excerpt: "Honored to be invited as a guest speaker at Next Node 2.0, sharing my journey and insights with the next generation of tech enthusiasts.",
+        date: "July 2026",
+        url: "https://www.linkedin.com/posts/v-s-monish-kumar_nextnode2-alumniconnect-guestspeaker-ugcPost-7485720361318236160-Usg5/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETJNa8BVvFD-tPHfmVclmHFdiyJ33h2kY8",
+        thumb: ""
+      },
       {
         title: "Joining IBM as an Application Developer!",
         excerpt: "Thrilled to start this new chapter — grateful for everything I learned at Clustrex and excited for what's ahead at IBM.",
@@ -2137,13 +2167,6 @@
         excerpt: "This degree is more than a certificate — it’s a story of consistency, sacrifice, and growth.",
         date: "June 2026",
         url: "https://www.linkedin.com/posts/v-s-monish-kumar_graduation-growthmindset-newbeginnings-ugcPost-7469197291825020929-FIHi/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETJNa8BVvFD-tPHfmVclmHFdiyJ33h2kY8",
-        thumb: ""
-      },
-      {
-        title: "Every Ending Opens the Door to a New Beginning",
-        excerpt: "Leaving my first workplace with gratitude, lifelong memories, and excitement for what's ahead.",
-        date: "June 2026",
-        url: "https://www.linkedin.com/posts/v-s-monish-kumar_gratitude-careerjourney-firstjob-share-7467324096599543809-7UWo/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETJNa8BVvFD-tPHfmVclmHFdiyJ33h2kY8",
         thumb: ""
       }
     ];
